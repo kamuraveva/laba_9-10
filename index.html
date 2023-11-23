@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Forms</title>
+</head>
+<body>
+    <script src="js/main.js"></script>
+
+    <div class="head">
+        <p>Добро пожаловать!<br><br>Для отправки данных необходимо заполнить все поля<br>и ввести корректно данные!<br><br>
+            Спасибо за внимание!</p>
+       </div>
+
+    <form id="form" name="myForm">
+	
+        <div class="form_1">
+            <input type="text" placeholder="Enter your name" name="user_name" id="name" onfocusout="validateName()">
+            <span id="text"></span>
+            
+            <input type="text" placeholder="Enter email address" name="user_email" id="email" onfocusout="validateEmail()">
+            <span id="text_1"></span>
+            
+            <input type="text" placeholder="Enter your subject" name="user_subject" id="subject" onfocusout="validateSubject()">
+            <span id="text_2"></span>
+        </div>
+        
+        <div class="form_2">
+            <div>
+                <textarea placeholder="Message" name="user_message" id="message" onfocusout="validateMessage()"></textarea><br>
+                <span id="text_3"></span>
+            </div>
+            <div>
+                <input id="button1" type="submit" disabled="true" value="Send message">
+            </div>
+    </div>
+    </form>
+	<script src="js/fetch.js"></script>
+</body>
+</html>
